@@ -37,4 +37,32 @@ const myFunction = function(){
 
 console.log(typeof score) //number
 console.log(typeof isLoggedIn) //boolean
-console.log(typeof outsideTemp) //object (bug)     
+console.log(typeof outsideTemp) //object (bug)      
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack vs Heap Memory
+
+//Primitive data types are stored in Stack memory
+
+
+    let a = 10;   // stored directly in stack
+    let b = a;    // copy of a (separate value)
+    b = 20;
+    console.log(a); // 10 (not affected)
+    console.log(b);
+
+//Reference data types are stored in Heap memory    
+
+
+
+    let userOne = {
+        Name : "Rishu",
+        Age : "23"
+    }
+    
+    let userTwo = userOne; //userTwo stores the reference to userOne object in Heap memory
+    userTwo.Age = "28";
+
+    console.log(userOne.Age);
+    console.log(userTwo.Age); 
