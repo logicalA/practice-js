@@ -52,7 +52,7 @@ console.log(typeof outsideTemp) //object (bug)
     console.log(a); // 10 (not affected)
     console.log(b);
 
-//Reference data types are stored in Heap memory    
+//non Primitive data types(Reference) are stored in Heap memory    
 
 
 
@@ -64,5 +64,6 @@ console.log(typeof outsideTemp) //object (bug)
     let userTwo = userOne; //userTwo stores the reference to userOne object in Heap memory
     userTwo.Age = "28";
 
-    console.log(userOne.Age);
-    console.log(userTwo.Age); 
+    console.log(userOne.Age); // Output will be 28 because both userOne and userTwo reference the same object
+    console.log(userTwo.Age); // if any changes made using userTwo will reflect in userOne as well
+    
